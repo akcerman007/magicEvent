@@ -1,5 +1,32 @@
-# Vue 3 + Vite
+# Magic Event Guyane 🎉
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Magic Event Guyane is a modern showcase website for an event planning service (weddings, ceremonies, private parties, corporate events) based in French Guiana and the French overseas territories.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## 🚀 Tech Stack
+- **Frontend**: [Vue.js 3](https://vuejs.org/) + [Vite](https://vitejs.dev/)
+- **Backend (planned)**: Java 17 + Spring Boot
+- **Version Control**: Git & GitHub
+
+## ✨ Features
+- Homepage with services and pricing
+- Photo gallery with hover effects
+- Event calendar (agenda)
+- Contact form with booking option
+- Responsive design with a simple, elegant color palette
+
+## 📦 Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/USER/REPO.git
+
+# Go to the frontend folder
+cd frontend
+
+# Install dependencies
+npm install
+
+# Run the dev server
+npm run dev
+
+                                                                                        
