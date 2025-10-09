@@ -3,67 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magic Events - Restaurants, Events, Catering</title>
+    <title>Magic Events - Mariage, Fêtes privées, Événements d'entreprise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/frontend/css/styles.css">
 </head>
 <body>
-<header>
-    <div class="logo">
-        <img src="/frontend/assets/images/cropped-Magic-Event.png" alt="Magic Event">
-    </div>
-    <nav>
-         <button class="reservation-btn"><b>RESERVEZ VOTRE DATE</b></button>
-        <div class="menu-toggle">☰</div>
-    </nav>
-</header>
-<main>
-    <h2 class="section-title">Mes Prestations</h2>
-    <div class="carousel-wrapper">
-        <div class="carousel-container">
-            <section class="slide" ><!--data-title="MARIAGES"-->  <!--In case we want to add the yellow titles back-->
-                <img src="/frontend/assets/images/slide1.jpg" alt="Mariages">
-                <h3>MARRIAGE</h3>
-            </section>
-            <section class="slide">
-                <img src="/frontend/assets/images/slide2-2.jpg" alt="Events">
-                <h3>FETES PRIVEES</h3>
-            </section>
-            <section class="slide">
-                <img src="/frontend/assets/images/slide3.jpg" alt="Catering">
-                <h3>EVENEMENTS D'ENTREPRISE</h3>
-            </section>
+    <header id="header">
+        <div class="logo">
+            <img src="/frontend/assets/images/cropped-Magic-Event.png" alt="Magic Event">
         </div>
-    </div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil" class="active">Accueil</a></li>
+                <li><a href="#prestations">Mes Prestations</a></li>
+                <li><a href="#qui-suis-je">Qui suis-je</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">☰</div>
+        </nav>
+    </header>
 
-    <!--formules tarifaires-->
-    <h2 class="section-title">Les Formules Tarifaires</h2>
-    <div class="carousel-wrapper">
-        <div class="carousel-container">
-            <section class="slide" ><!--data-title="MARIAGES"-->  <!--In case we want to add the yellow titles back-->
-                <img src="/frontend/assets/images/slide1.jpg" alt="Mariages">
-                <h3>MARRIAGE</h3>
-            </section>
-            <section class="slide">
-                <img src="/frontend/assets/images/slide2-2.jpg" alt="Events">
-                <h3>FETES PRIVEES</h3>
-            </section>
-            <section class="slide">
-                <img src="/frontend/assets/images/slide3.jpg" alt="Catering">
-                <h3>EVENEMENTS D'ENTREPRISE</h3>
-            </section>
+    <!-- Hero Section avec Parallax -->
+    <section id="accueil" class="hero-section">
+        <div class="hero-parallax-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Magic Events</h1>
+            <p class="hero-subtitle">L'art de créer des moments inoubliables</p>
+            <button class="cta-button">Découvrir nos services</button>
         </div>
-    </div>
-</main>
-<footer>
-    <div class="copyright">
-        Copyright 2024 - Tous droits réservés LD Consult
-    </div>
-    <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-        <a href="#">Accessibility Statement</a>
-    </div>
-</footer>
+        <div class="scroll-indicator">
+            <span>Défiler</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- Prestations Section -->
+    <section id="prestations" class="prestations-section">
+        <div class="section-header">
+            <h2 class="section-title">Nos Prestations</h2>
+            <p class="section-subtitle">Des événements sur-mesure pour vos moments précieux</p>
+        </div>
+        
+        <div class="carousel-wrapper">
+            <div class="carousel-container">
+                <div class="slide">
+                    <img src="/frontend/assets/images/slide1.jpg" alt="Mariages">
+                    <div class="slide-overlay">
+                        <h3>Mariages</h3>
+                        <p>Célébrez votre union dans un cadre d'exception</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="/frontend/assets/images/slide2-2.jpg" alt="Fêtes Privées">
+                    <div class="slide-overlay">
+                        <h3>Fêtes Privées</h3>
+                        <p>Des célébrations intimes et mémorables</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="/frontend/assets/images/slide3.jpg" alt="Événements d'Entreprise">
+                    <div class="slide-overlay">
+                        <h3>Événements d'Entreprise</h3>
+                        <p>Valorisez votre image professionnelle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qui suis-je Section avec Parallax -->
+    <section id="qui-suis-je" class="about-section parallax-section">
+        <div class="parallax-layer parallax-bg"></div>
+        <div class="content-container">
+            <div class="about-content">
+                <h2 class="section-title">L'Excellence au Service de vos Événements</h2>
+                <div class="about-text">
+                    <p>Depuis plus de 10 ans, nous créons des événements d'exception qui marquent les esprits. Notre passion pour les détails et notre engagement envers l'excellence font de chaque célébration un moment unique et inoubliable.</p>
+                    <p>Notre équipe de professionnels expérimentés vous accompagne à chaque étape, de la conception à la réalisation, pour transformer vos rêves en réalité.</p>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Événements réalisés</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">Années d'expérience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Clients satisfaits</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie Section -->
+    <section id="galerie" class="gallery-section">
+        <div class="section-header">
+            <h2 class="section-title">Nos Réalisations</h2>
+            <p class="section-subtitle">Un aperçu de nos créations</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item large">
+                <img src="/frontend/assets/images/slide1.jpg" alt="Réalisation 1">
+                <div class="gallery-overlay">
+                    <span>Mariage Élégant</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="/frontend/assets/images/slide2-2.jpg" alt="Réalisation 2">
+                <div class="gallery-overlay">
+                    <span>Fête Privée</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="/frontend/assets/images/slide3.jpg" alt="Réalisation 3">
+                <div class="gallery-overlay">
+                    <span>Événement Corporate</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="/frontend/assets/images/slide1.jpg" alt="Réalisation 4">
+                <div class="gallery-overlay">
+                    <span>Réception</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section avec Parallax -->
+    <section id="contact" class="contact-section parallax-section">
+        <div class="parallax-layer parallax-bg-dark"></div>
+        <div class="content-container">
+            <div class="contact-content">
+                <h2 class="section-title">Créons Ensemble Votre Événement</h2>
+                <p class="contact-intro">Partagez-nous votre vision, nous la transformerons en réalité</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@magicevents.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+596 696 XX XX XX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4>Localisation</h4>
+                            <p>Guyane, Antilles Françaises</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="cta-button">Réservez votre date</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="copyright">
+                Copyright 2024 - Tous droits réservés LD Consult
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Accessibility Statement</a>
+            </div>
+        </div>
+    </footer>
+
     <script src="/frontend/js/script.js"></script>
 </body>
 </html>
