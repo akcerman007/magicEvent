@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Magic Events</title>
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="/index.html">
+            <img src="/frontend/assets/images/cropped-Magic-Event.png" alt="Magic Event">
+        </a>
+    </div>
+    <nav>
+        <button class="reservation-btn"><b>RÉSERVEZ VOTRE DATE</b></button>
+        <div class="menu-toggle">☰</div>
+    </nav>
+</header>
+
+<main>
+    <section class="contact-page">
+        <h2 class="section-title">Contactez-nous</h2>
+        <p class="contact-intro">
+            Une question, une demande de devis ou un projet à partager ?  
+            Remplissez le formulaire ci-dessous et notre équipe vous répondra rapidement.
+        </p>
+
+        <form class="contact-form" action="#" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="exemple@mail.com" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" name="subject" placeholder="Sujet du message">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
+            </div>
+
+            <button type="submit" class="contact-btn"><b>ENVOYER</b></button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="copyright">
+        Copyright 2024 - Tous droits réservés LD Consult
+    </div>
+    <div class="footer-links">
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">Conditions d’utilisation</a>
+        <a href="#">Accessibilité</a>
+    </div>
+</footer>
+
+<script src="/frontend/js/script.js"></script>
+<script>
+    // Confirmation simple à l’envoi
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Merci pour votre message ! Nous reviendrons vers vous rapidement.');
+        this.reset();
+    });
+</script>
+</body>
+</html>

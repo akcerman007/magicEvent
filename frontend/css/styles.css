@@ -40,8 +40,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: transparent;
+    backdrop-filter: none;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.6s ease;
 }
@@ -105,7 +105,7 @@ main {
 /* Titre principal */
 .section-title {
     font-size: 3rem;
-    color: white;
+    color: rgb(108, 103, 103);
     text-align: center;
     margin-bottom: 60px;
     font-weight: bold;
@@ -424,4 +424,108 @@ footer {
 
 .carousel-container.dragging .slide {
     pointer-events: none;
+}
+
+
+
+/* === PAGE CONTACT === */
+.contact-page {
+    width: 100%;
+    max-width: 900px;
+    margin: 160px auto 120px;
+    padding: 60px 50px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease both;
+}
+
+.contact-intro {
+    text-align: center;
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-row {
+    display: flex;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #FFD700;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+/* Bouton d’envoi */
+.contact-btn {
+    align-self: center;
+    background: #FFD700;
+    border: none;
+    color: #1a1a1a;
+    padding: 14px 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.contact-btn:hover {
+    background: #FFC700;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-page {
+        margin: 120px 20px 80px;
+        padding: 40px 25px;
+    }
+
+    .contact-btn {
+        width: 100%;
+    }
 }
