@@ -1,0 +1,163 @@
+/* ===== STYLE UNIQUE POUR LA PAGE ÉVÉNEMENTS D'ENTREPRISE ===== */
+
+/* Thème corporate avec bleu et argent */
+.hero-prestation {
+    background: linear-gradient(135deg, rgba(70, 130, 180, 0.1) 0%, rgba(26, 26, 26, 0.9) 100%);
+}
+
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(70, 130, 180, 0.2) 0%, rgba(100, 149, 237, 0.1) 50%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+.hero-title {
+    color: #4682B4;
+    text-shadow: 0 0 30px rgba(70, 130, 180, 0.6), 2px 2px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Services avec style corporate */
+.service-card {
+    background: linear-gradient(135deg, rgba(70, 130, 180, 0.05) 0%, rgba(26, 26, 26, 0.7) 100%);
+    border: 1px solid rgba(70, 130, 180, 0.2);
+    position: relative;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, #4682B4, #6495ED);
+    transition: height 0.4s ease;
+}
+
+.service-card:hover::after {
+    height: 100%;
+}
+
+.service-card:hover {
+    border-color: #4682B4;
+    box-shadow: 0 15px 40px rgba(70, 130, 180, 0.4);
+    background: linear-gradient(135deg, rgba(70, 130, 180, 0.1) 0%, rgba(26, 26, 26, 0.8) 100%);
+}
+
+.service-card h3 {
+    color: #4682B4;
+}
+
+.service-icon {
+    filter: drop-shadow(0 0 10px rgba(70, 130, 180, 0.5));
+}
+
+/* Pricing cards avec accents bleus */
+.pricing-card {
+    background: linear-gradient(135deg, rgba(70, 130, 180, 0.05) 0%, rgba(26, 26, 26, 0.7) 100%);
+    border: 2px solid rgba(70, 130, 180, 0.25);
+}
+
+.pricing-card.featured {
+    border-color: #4682B4;
+    box-shadow: 0 20px 60px rgba(70, 130, 180, 0.5);
+    background: linear-gradient(135deg, rgba(70, 130, 180, 0.1) 0%, rgba(26, 26, 26, 0.85) 100%);
+}
+
+.pricing-header h3 {
+    color: #4682B4;
+}
+
+.badge {
+    background: linear-gradient(135deg, #4682B4, #6495ED);
+}
+
+.duration {
+    color: #4682B4;
+}
+
+/* Galerie avec overlay bleu */
+.gallery-overlay-prestation {
+    background: linear-gradient(180deg, transparent 0%, rgba(70, 130, 180, 0.2) 50%, rgba(26, 26, 26, 0.95) 100%);
+}
+
+.gallery-overlay-prestation span {
+    color: #4682B4;
+}
+
+/* Section titre */
+.section-title {
+    color: #4682B4;
+    text-shadow: 0 0 20px rgba(70, 130, 180, 0.4);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #4682B4, transparent);
+}
+
+/* Intro text */
+.intro-text h2 {
+    color: #4682B4;
+}
+
+/* CTA section */
+.cta-section {
+    background: linear-gradient(135deg, rgba(70, 130, 180, 0.15) 0%, rgba(10, 10, 10, 0.9) 100%);
+}
+
+.cta-section h2 {
+    color: #4682B4;
+}
+
+/* Boutons */
+.cta-button {
+    background: linear-gradient(135deg, #4682B4, #6495ED);
+}
+
+.cta-button:hover {
+    box-shadow: 0 15px 40px rgba(70, 130, 180, 0.7);
+}
+
+.cta-button-secondary {
+    color: #4682B4;
+    border-color: #4682B4;
+}
+
+.cta-button-secondary:hover {
+    background: #4682B4;
+}
+
+.cta-button-large {
+    background: linear-gradient(135deg, #4682B4, #6495ED);
+    box-shadow: 0 15px 40px rgba(70, 130, 180, 0.5);
+}
+
+.cta-button-large:hover {
+    box-shadow: 0 20px 50px rgba(70, 130, 180, 0.8);
+}
+
+/* Effet de grille professionnelle en arrière-plan */
+.services-section {
+    position: relative;
+}
+
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(70, 130, 180, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(70, 130, 180, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    opacity: 0.5;
+}

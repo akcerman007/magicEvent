@@ -1,0 +1,143 @@
+/* ===== STYLE UNIQUE POUR LA PAGE FÊTES PRIVÉES ===== */
+
+/* Thème festif avec violet et magenta */
+.hero-prestation {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(26, 26, 26, 0.9) 100%);
+}
+
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(255, 0, 255, 0.1) 50%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+.hero-title {
+    color: #BA55D3;
+    text-shadow: 0 0 30px rgba(186, 85, 211, 0.6), 2px 2px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Services avec style festif */
+.service-card {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.05) 0%, rgba(26, 26, 26, 0.7) 100%);
+    border: 1px solid rgba(186, 85, 211, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '🎉';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 3rem;
+    opacity: 0.1;
+    transform: rotate(15deg);
+}
+
+.service-card:hover {
+    border-color: #BA55D3;
+    box-shadow: 0 15px 40px rgba(186, 85, 211, 0.4);
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(26, 26, 26, 0.8) 100%);
+}
+
+.service-card h3 {
+    color: #BA55D3;
+}
+
+.service-icon {
+    filter: drop-shadow(0 0 10px rgba(186, 85, 211, 0.5));
+}
+
+/* Pricing cards avec accents violets */
+.pricing-card {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.05) 0%, rgba(26, 26, 26, 0.7) 100%);
+    border: 2px solid rgba(186, 85, 211, 0.25);
+}
+
+.pricing-card.featured {
+    border-color: #BA55D3;
+    box-shadow: 0 20px 60px rgba(186, 85, 211, 0.5);
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(26, 26, 26, 0.85) 100%);
+}
+
+.pricing-header h3 {
+    color: #BA55D3;
+}
+
+.badge {
+    background: linear-gradient(135deg, #BA55D3, #DA70D6);
+}
+
+.duration {
+    color: #BA55D3;
+}
+
+/* Galerie avec overlay violet */
+.gallery-overlay-prestation {
+    background: linear-gradient(180deg, transparent 0%, rgba(138, 43, 226, 0.2) 50%, rgba(26, 26, 26, 0.95) 100%);
+}
+
+.gallery-overlay-prestation span {
+    color: #BA55D3;
+}
+
+/* Section titre */
+.section-title {
+    color: #BA55D3;
+    text-shadow: 0 0 20px rgba(186, 85, 211, 0.4);
+}
+
+/* Intro text */
+.intro-text h2 {
+    color: #BA55D3;
+}
+
+/* CTA section */
+.cta-section {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.15) 0%, rgba(10, 10, 10, 0.9) 100%);
+}
+
+.cta-section h2 {
+    color: #BA55D3;
+}
+
+/* Boutons */
+.cta-button {
+    background: linear-gradient(135deg, #BA55D3, #DA70D6);
+}
+
+.cta-button:hover {
+    box-shadow: 0 15px 40px rgba(186, 85, 211, 0.7);
+}
+
+.cta-button-secondary {
+    color: #BA55D3;
+    border-color: #BA55D3;
+}
+
+.cta-button-secondary:hover {
+    background: #BA55D3;
+}
+
+.cta-button-large {
+    background: linear-gradient(135deg, #BA55D3, #DA70D6);
+    box-shadow: 0 15px 40px rgba(186, 85, 211, 0.5);
+}
+
+.cta-button-large:hover {
+    box-shadow: 0 20px 50px rgba(186, 85, 211, 0.8);
+}
+
+/* Confettis animés */
+.hero-content::after {
+    content: '🎊';
+    position: absolute;
+    top: -60px;
+    right: -30px;
+    font-size: 3rem;
+    opacity: 0.4;
+    animation: confetti 3s ease-in-out infinite;
+}
+
+@keyframes confetti {
+    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.4; }
+    50% { transform: translateY(-15px) rotate(180deg); opacity: 0.7; }
+}

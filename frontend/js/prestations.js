@@ -18,6 +18,26 @@ links.forEach(link => {
     });
 });
 
+// ===== PARALLAX EFFECT FOR HERO =====
+let ticking = false;
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            const scrolled = window.pageYOffset;
+            const heroParallax = document.querySelector('.hero-parallax-image');
+            
+            if (heroParallax) {
+                // Effet parallax prononcé avec zoom
+                heroParallax.style.transform = `translateY(${scrolled * 0.6}px) scale(1.1)`;
+            }
+            
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
 // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -37,29 +57,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== INTERSECTION OBSERVER FOR ANIMATIONS =====
+// ===== INTERSECTION OBSERVER FOR CARDS ANIMATIONS =====
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.15,
+    rootMargin: '0px 0px -80px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('animate');
+            // Une fois animé, on arrête d'observer cet élément
+            observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-// Observe animated elements
-const animatedElements = document.querySelectorAll('.service-card, .pricing-card, .gallery-item-prestation');
-animatedElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
+// Observer toutes les cards
+const serviceCards = document.querySelectorAll('.service-card');
+const pricingCards = document.querySelectorAll('.pricing-card');
+const galleryItems = document.querySelectorAll('.gallery-item-prestation');
+
+serviceCards.forEach(card => observer.observe(card));
+pricingCards.forEach(card => observer.observe(card));
+galleryItems.forEach(item => observer.observe(item));
 
 // ===== CTA BUTTONS =====
 const ctaButtons = document.querySelectorAll('.cta-button, .cta-button-secondary, .cta-button-large');
