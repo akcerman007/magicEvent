@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Magic Events</title>
     <link rel="stylesheet" href="/frontend/css/styles.css">
+    <link rel="stylesheet" href="/frontend/css/contact.css">
 </head>
 <body>
 <header>
@@ -27,7 +28,8 @@
             Remplissez le formulaire ci-dessous et notre équipe vous répondra rapidement.
         </p>
 
-        <form class="contact-form" action="#" method="POST">
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="763a585e-8144-41a9-ad87-dc45c4a660e0">
             <div class="form-row">
                 <div class="form-group">
                     <label for="name">Nom complet</label>
@@ -54,8 +56,12 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
             </div>
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
+            <input type="hidden" name="redirect" value="http://127.0.0.1:5500/frontend/index.html">
             <button type="submit" class="contact-btn"><b>ENVOYER</b></button>
+            
         </form>
     </section>
 </main>
@@ -72,13 +78,13 @@
 </footer>
 
 <script src="/frontend/js/script.js"></script>
-<script>
+<!-- <script>
     // Confirmation simple à l’envoi
     document.querySelector('.contact-form').addEventListener('submit', function(e) {
         e.preventDefault();
         alert('Merci pour votre message ! Nous reviendrons vers vous rapidement.');
         this.reset();
     });
-</script>
+</script> -->
 </body>
 </html>
